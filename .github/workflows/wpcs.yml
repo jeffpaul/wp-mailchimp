@@ -12,6 +12,7 @@ jobs:
           uses: 10up/wpcs-action@stable
           with:
             repo_branch: 'develop'
+            standard: 'WordPress'
         - name: Update summary
           run: |
             npm i -g github:10up/phpcs-json-to-md

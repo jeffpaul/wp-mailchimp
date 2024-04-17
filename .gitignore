@@ -1,0 +1,22 @@
+node_modules
+npm-debug.log
+dist/
+build/
+vendor
+
+# Mac OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+.wp-env.override.json
+
+tests/cypress/screenshots/
+tests/cypress/videos/
+
+vendor

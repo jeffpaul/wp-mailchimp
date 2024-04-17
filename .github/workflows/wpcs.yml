@@ -1,6 +1,13 @@
 name: WPCS
 
-on: pull_request
+on: 
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   phpcs:
@@ -11,7 +18,6 @@ jobs:
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
-            repo_branch: 'develop'
             standard: 'WordPress'
         - name: Update summary
           run: |

@@ -1,6 +1,13 @@
 name: WPCS
 
-on: pull_request
+on: 
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   phpcs:
@@ -12,6 +19,7 @@ jobs:
           uses: 10up/wpcs-action@stable
           with:
             repo_branch: 'develop'
+            standard: 'WordPress'
         - name: Update summary
           run: |
             npm i -g github:10up/phpcs-json-to-md

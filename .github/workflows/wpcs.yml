@@ -18,6 +18,7 @@ jobs:
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
+            repo_branch: 'develop'
             standard: 'WordPress'
         - name: Update summary
           run: |
